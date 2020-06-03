@@ -3,7 +3,7 @@ info:
   title: Defect Dojo API
   description: To use the API you need be authorized.
   version: v2
-host: 'defectdojo.site.com'
+host: 'localhost:8080'
 schemes:
   - http
 basePath: /api/v2
@@ -791,6 +791,16 @@ paths:
           description: ''
           required: false
           type: string
+        - name: test__engagement__product
+          in: query
+          description: ''
+          required: false
+          type: string
+        - name: test__engagement
+          in: query
+          description: ''
+          required: false
+          type: string
         - name: limit
           in: query
           description: Number of results to return per page.
@@ -1094,7 +1104,7 @@ paths:
           required: false
           type: string
           format: date
-          default: '2020-06-01'
+          default: '2020-06-03'
         - name: minimum_severity
           in: formData
           required: false
@@ -4885,7 +4895,7 @@ definitions:
         title: Scan date
         type: string
         format: date
-        default: '2020-06-01'
+        default: '2020-06-03'
       minimum_severity:
         title: Minimum severity
         type: string
