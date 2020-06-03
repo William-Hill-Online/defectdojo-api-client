@@ -201,8 +201,8 @@ class FindingTemplate(object):
             raise ValueError("Invalid value for `cve`, length must be less than or equal to `28`")  # noqa: E501
         if cve is not None and len(cve) < 1:
             raise ValueError("Invalid value for `cve`, length must be greater than or equal to `1`")  # noqa: E501
-        if cve is not None and not re.search(r'^[A-Z]{1,10}(-\d+)+$', cve):  # noqa: E501
-            raise ValueError(r"Invalid value for `cve`, must be a follow pattern or equal to `/^[A-Z]{1,10}(-\d+)+$/`")  # noqa: E501
+        if cve is not None and not re.search(r'^[A-Z]{1,10}(-\\d+)+$', cve):  # noqa: E501
+            raise ValueError(r"Invalid value for `cve`, must be a follow pattern or equal to `/^[A-Z]{1,10}(-\\d+)+$/`")  # noqa: E501
 
         self._cve = cve
 

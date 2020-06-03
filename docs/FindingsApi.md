@@ -1,6 +1,6 @@
 # defectdojo_api_swagger.FindingsApi
 
-All URIs are relative to *http://defectdojo.site.com/api/v2*
+All URIs are relative to *http://localhost:8080/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **findings_list**
-> InlineResponse2004 findings_list(id=id, title=title, _date=_date, severity=severity, description=description, mitigated=mitigated, endpoints=endpoints, test=test, active=active, verified=verified, false_p=false_p, reporter=reporter, url=url, out_of_scope=out_of_scope, duplicate=duplicate, limit=limit, offset=offset)
+> InlineResponse2004 findings_list(id=id, title=title, _date=_date, severity=severity, description=description, mitigated=mitigated, endpoints=endpoints, test=test, active=active, verified=verified, false_p=false_p, reporter=reporter, url=url, out_of_scope=out_of_scope, duplicate=duplicate, test__engagement__product=test__engagement__product, test__engagement=test__engagement, limit=limit, offset=offset)
 
 
 
@@ -271,11 +271,13 @@ reporter = 'reporter_example' # str |  (optional)
 url = 'url_example' # str |  (optional)
 out_of_scope = 'out_of_scope_example' # str |  (optional)
 duplicate = 'duplicate_example' # str |  (optional)
+test__engagement__product = 'test__engagement__product_example' # str |  (optional)
+test__engagement = 'test__engagement_example' # str |  (optional)
 limit = 56 # int | Number of results to return per page. (optional)
 offset = 56 # int | The initial index from which to return the results. (optional)
 
 try:
-    api_response = api_instance.findings_list(id=id, title=title, _date=_date, severity=severity, description=description, mitigated=mitigated, endpoints=endpoints, test=test, active=active, verified=verified, false_p=false_p, reporter=reporter, url=url, out_of_scope=out_of_scope, duplicate=duplicate, limit=limit, offset=offset)
+    api_response = api_instance.findings_list(id=id, title=title, _date=_date, severity=severity, description=description, mitigated=mitigated, endpoints=endpoints, test=test, active=active, verified=verified, false_p=false_p, reporter=reporter, url=url, out_of_scope=out_of_scope, duplicate=duplicate, test__engagement__product=test__engagement__product, test__engagement=test__engagement, limit=limit, offset=offset)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling FindingsApi->findings_list: %s\n" % e)
@@ -300,6 +302,8 @@ Name | Type | Description  | Notes
  **url** | **str**|  | [optional] 
  **out_of_scope** | **str**|  | [optional] 
  **duplicate** | **str**|  | [optional] 
+ **test__engagement__product** | **str**|  | [optional] 
+ **test__engagement** | **str**|  | [optional] 
  **limit** | **int**| Number of results to return per page. | [optional] 
  **offset** | **int**| The initial index from which to return the results. | [optional] 
 

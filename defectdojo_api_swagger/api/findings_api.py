@@ -454,6 +454,8 @@ class FindingsApi(object):
         :param str url: 
         :param str out_of_scope: 
         :param str duplicate: 
+        :param str test__engagement__product: 
+        :param str test__engagement: 
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
         :return: InlineResponse2004
@@ -492,6 +494,8 @@ class FindingsApi(object):
         :param str url: 
         :param str out_of_scope: 
         :param str duplicate: 
+        :param str test__engagement__product: 
+        :param str test__engagement: 
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
         :return: InlineResponse2004
@@ -499,7 +503,7 @@ class FindingsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'title', '_date', 'severity', 'description', 'mitigated', 'endpoints', 'test', 'active', 'verified', 'false_p', 'reporter', 'url', 'out_of_scope', 'duplicate', 'limit', 'offset']  # noqa: E501
+        all_params = ['id', 'title', '_date', 'severity', 'description', 'mitigated', 'endpoints', 'test', 'active', 'verified', 'false_p', 'reporter', 'url', 'out_of_scope', 'duplicate', 'test__engagement__product', 'test__engagement', 'limit', 'offset']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -550,6 +554,10 @@ class FindingsApi(object):
             query_params.append(('out_of_scope', params['out_of_scope']))  # noqa: E501
         if 'duplicate' in params:
             query_params.append(('duplicate', params['duplicate']))  # noqa: E501
+        if 'test__engagement__product' in params:
+            query_params.append(('test__engagement__product', params['test__engagement__product']))  # noqa: E501
+        if 'test__engagement' in params:
+            query_params.append(('test__engagement', params['test__engagement']))  # noqa: E501
         if 'limit' in params:
             query_params.append(('limit', params['limit']))  # noqa: E501
         if 'offset' in params:

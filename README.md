@@ -69,7 +69,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://defectdojo.site.com/api/v2*
+All URIs are relative to *http://localhost:8080/api/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

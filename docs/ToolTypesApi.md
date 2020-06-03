@@ -1,6 +1,6 @@
 # defectdojo_api_swagger.ToolTypesApi
 
-All URIs are relative to *http://defectdojo.site.com/api/v2*
+All URIs are relative to *http://localhost:8080/api/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
