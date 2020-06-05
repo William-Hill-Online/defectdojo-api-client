@@ -32,7 +32,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = defectdojo_api_swagger.ImportScanApi(defectdojo_api_swagger.ApiClient(configuration))
 scan_type = 'scan_type_example' # str | 
 engagement = 56 # int | 
-scan_date = '2020-06-03' # date |  (optional) (default to 2020-06-03)
+scan_date = '2020-06-05' # date |  (optional) (default to 2020-06-05)
 minimum_severity = 'Info' # str |  (optional) (default to Info)
 active = true # bool |  (optional) (default to true)
 verified = true # bool |  (optional) (default to true)
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **scan_type** | **str**|  | 
  **engagement** | **int**|  | 
- **scan_date** | **date**|  | [optional] [default to 2020-06-03]
+ **scan_date** | **date**|  | [optional] [default to 2020-06-05]
  **minimum_severity** | **str**|  | [optional] [default to Info]
  **active** | **bool**|  | [optional] [default to true]
  **verified** | **bool**|  | [optional] [default to true]

@@ -44,8 +44,8 @@ class EngagementsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this engagement. (required)
-        :param AcceptedRisk data: (required)
-        :return: AcceptedRisk
+        :param list[AcceptedRisk] data: (required)
+        :return: RiskAcceptance
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -67,8 +67,8 @@ class EngagementsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this engagement. (required)
-        :param AcceptedRisk data: (required)
-        :return: AcceptedRisk
+        :param list[AcceptedRisk] data: (required)
+        :return: RiskAcceptance
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -132,7 +132,7 @@ class EngagementsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='AcceptedRisk',  # noqa: E501
+            response_type='RiskAcceptance',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -140,47 +140,45 @@ class EngagementsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def engagements_close(self, id, data, **kwargs):  # noqa: E501
+    def engagements_close(self, id, **kwargs):  # noqa: E501
         """engagements_close  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.engagements_close(id, data, async_req=True)
+        >>> thread = api.engagements_close(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int id: A unique integer value identifying this engagement. (required)
-        :param Engagement data: (required)
-        :return: Engagement
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.engagements_close_with_http_info(id, data, **kwargs)  # noqa: E501
+            return self.engagements_close_with_http_info(id, **kwargs)  # noqa: E501
         else:
-            (data) = self.engagements_close_with_http_info(id, data, **kwargs)  # noqa: E501
+            (data) = self.engagements_close_with_http_info(id, **kwargs)  # noqa: E501
             return data
 
-    def engagements_close_with_http_info(self, id, data, **kwargs):  # noqa: E501
+    def engagements_close_with_http_info(self, id, **kwargs):  # noqa: E501
         """engagements_close  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.engagements_close_with_http_info(id, data, async_req=True)
+        >>> thread = api.engagements_close_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int id: A unique integer value identifying this engagement. (required)
-        :param Engagement data: (required)
-        :return: Engagement
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'data']  # noqa: E501
+        all_params = ['id']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -199,10 +197,6 @@ class EngagementsApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `engagements_close`")  # noqa: E501
-        # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
-            raise ValueError("Missing the required parameter `data` when calling `engagements_close`")  # noqa: E501
 
         collection_formats = {}
 
@@ -218,8 +212,6 @@ class EngagementsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'data' in params:
-            body_params = params['data']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -239,7 +231,7 @@ class EngagementsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Engagement',  # noqa: E501
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -456,8 +448,8 @@ class EngagementsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this engagement. (required)
-        :param Engagement data: (required)
-        :return: Engagement
+        :param ReportGenerateOption data: (required)
+        :return: ReportGenerate
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -479,8 +471,8 @@ class EngagementsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this engagement. (required)
-        :param Engagement data: (required)
-        :return: Engagement
+        :param ReportGenerateOption data: (required)
+        :return: ReportGenerate
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -544,7 +536,7 @@ class EngagementsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Engagement',  # noqa: E501
+            response_type='ReportGenerate',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -917,47 +909,45 @@ class EngagementsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def engagements_reopen(self, id, data, **kwargs):  # noqa: E501
+    def engagements_reopen(self, id, **kwargs):  # noqa: E501
         """engagements_reopen  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.engagements_reopen(id, data, async_req=True)
+        >>> thread = api.engagements_reopen(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int id: A unique integer value identifying this engagement. (required)
-        :param Engagement data: (required)
-        :return: Engagement
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.engagements_reopen_with_http_info(id, data, **kwargs)  # noqa: E501
+            return self.engagements_reopen_with_http_info(id, **kwargs)  # noqa: E501
         else:
-            (data) = self.engagements_reopen_with_http_info(id, data, **kwargs)  # noqa: E501
+            (data) = self.engagements_reopen_with_http_info(id, **kwargs)  # noqa: E501
             return data
 
-    def engagements_reopen_with_http_info(self, id, data, **kwargs):  # noqa: E501
+    def engagements_reopen_with_http_info(self, id, **kwargs):  # noqa: E501
         """engagements_reopen  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.engagements_reopen_with_http_info(id, data, async_req=True)
+        >>> thread = api.engagements_reopen_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int id: A unique integer value identifying this engagement. (required)
-        :param Engagement data: (required)
-        :return: Engagement
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'data']  # noqa: E501
+        all_params = ['id']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -976,10 +966,6 @@ class EngagementsApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `engagements_reopen`")  # noqa: E501
-        # verify the required parameter 'data' is set
-        if ('data' not in params or
-                params['data'] is None):
-            raise ValueError("Missing the required parameter `data` when calling `engagements_reopen`")  # noqa: E501
 
         collection_formats = {}
 
@@ -995,8 +981,6 @@ class EngagementsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'data' in params:
-            body_params = params['data']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -1016,7 +1000,7 @@ class EngagementsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Engagement',  # noqa: E501
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

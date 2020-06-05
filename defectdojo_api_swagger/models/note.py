@@ -74,7 +74,8 @@ class Note(object):
         if id is not None:
             self.id = id
         self.author = author
-        self.editor = editor
+        if editor is not None:
+            self.editor = editor
         if history is not None:
             self.history = history
         self.entry = entry
@@ -151,8 +152,6 @@ class Note(object):
         :param editor: The editor of this Note.  # noqa: E501
         :type: User
         """
-        if editor is None:
-            raise ValueError("Invalid value for `editor`, must not be `None`")  # noqa: E501
 
         self._editor = editor
 

@@ -4,13 +4,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
+**name** | **str** | Descriptive name which in the future may also be used to group risk acceptances together across engagements and products | 
 **path** | **str** |  | [optional] 
-**expiration_date** | **datetime** |  | [optional] 
 **accepted_by** | **str** | The entity or person that accepts the risk. | [optional] 
+**expiration_date** | **datetime** |  | [optional] 
 **compensating_control** | **str** | If a compensating control exists to mitigate the finding or reduce risk, then list the compensating control(s). | [optional] 
 **created** | **datetime** |  | [optional] 
 **updated** | **datetime** |  | [optional] 
-**reporter** | **int** |  | [optional] 
+**owner** | **int** | Only the owner and staff users can edit the risk acceptance. | 
 **accepted_findings** | **list[int]** |  | 
 **notes** | **list[int]** |  | [optional] 
 

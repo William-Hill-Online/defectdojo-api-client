@@ -119,7 +119,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **endpoints_generate_report**
-> Endpoint endpoints_generate_report(id, data)
+> ReportGenerate endpoints_generate_report(id, data)
 
 
 
@@ -142,7 +142,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = defectdojo_api_swagger.EndpointsApi(defectdojo_api_swagger.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this endpoint.
-data = defectdojo_api_swagger.Endpoint() # Endpoint | 
+data = defectdojo_api_swagger.ReportGenerateOption() # ReportGenerateOption | 
 
 try:
     api_response = api_instance.endpoints_generate_report(id, data)
@@ -156,11 +156,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this endpoint. | 
- **data** | [**Endpoint**](Endpoint.md)|  | 
+ **data** | [**ReportGenerateOption**](ReportGenerateOption.md)|  | 
 
 ### Return type
 
-[**Endpoint**](Endpoint.md)
+[**ReportGenerate**](ReportGenerate.md)
 
 ### Authorization
 

@@ -23,7 +23,7 @@ Method | HTTP request | Description
 
 
 # **findings_accept_risks**
-> FindingCreate findings_accept_risks(data)
+> RiskAcceptance findings_accept_risks(data)
 
 
 
@@ -45,7 +45,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = defectdojo_api_swagger.FindingsApi(defectdojo_api_swagger.ApiClient(configuration))
-data = defectdojo_api_swagger.FindingCreate() # FindingCreate | 
+data = [defectdojo_api_swagger.AcceptedRisk()] # list[AcceptedRisk] | 
 
 try:
     api_response = api_instance.findings_accept_risks(data)
@@ -58,11 +58,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**FindingCreate**](FindingCreate.md)|  | 
+ **data** | [**list[AcceptedRisk]**](AcceptedRisk.md)|  | 
 
 ### Return type
 
-[**FindingCreate**](FindingCreate.md)
+[**RiskAcceptance**](RiskAcceptance.md)
 
 ### Authorization
 
@@ -181,7 +181,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **findings_generate_report**
-> FindingCreate findings_generate_report(data)
+> ReportGenerate findings_generate_report(data)
 
 
 
@@ -203,7 +203,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = defectdojo_api_swagger.FindingsApi(defectdojo_api_swagger.ApiClient(configuration))
-data = defectdojo_api_swagger.FindingCreate() # FindingCreate | 
+data = defectdojo_api_swagger.ReportGenerateOption() # ReportGenerateOption | 
 
 try:
     api_response = api_instance.findings_generate_report(data)
@@ -216,11 +216,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**FindingCreate**](FindingCreate.md)|  | 
+ **data** | [**ReportGenerateOption**](ReportGenerateOption.md)|  | 
 
 ### Return type
 
-[**FindingCreate**](FindingCreate.md)
+[**ReportGenerate**](ReportGenerate.md)
 
 ### Authorization
 
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **findings_notes_create**
-> FindingCreate findings_notes_create(id, data)
+> Note findings_notes_create(id, data)
 
 
 
@@ -346,7 +346,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = defectdojo_api_swagger.FindingsApi(defectdojo_api_swagger.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this finding.
-data = defectdojo_api_swagger.FindingCreate() # FindingCreate | 
+data = defectdojo_api_swagger.AddNewNoteOption() # AddNewNoteOption | 
 
 try:
     api_response = api_instance.findings_notes_create(id, data)
@@ -360,11 +360,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this finding. | 
- **data** | [**FindingCreate**](FindingCreate.md)|  | 
+ **data** | [**AddNewNoteOption**](AddNewNoteOption.md)|  | 
 
 ### Return type
 
-[**FindingCreate**](FindingCreate.md)
+[**Note**](Note.md)
 
 ### Authorization
 
@@ -378,7 +378,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **findings_notes_partial_update**
-> Finding findings_notes_partial_update(id, data)
+> Note findings_notes_partial_update(id, data)
 
 
 
@@ -401,7 +401,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = defectdojo_api_swagger.FindingsApi(defectdojo_api_swagger.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this finding.
-data = defectdojo_api_swagger.Finding() # Finding | 
+data = defectdojo_api_swagger.AddNewNoteOption() # AddNewNoteOption | 
 
 try:
     api_response = api_instance.findings_notes_partial_update(id, data)
@@ -415,11 +415,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this finding. | 
- **data** | [**Finding**](Finding.md)|  | 
+ **data** | [**AddNewNoteOption**](AddNewNoteOption.md)|  | 
 
 ### Return type
 
-[**Finding**](Finding.md)
+[**Note**](Note.md)
 
 ### Authorization
 
@@ -433,7 +433,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **findings_notes_read**
-> Finding findings_notes_read(id)
+> FindingToNotes findings_notes_read(id)
 
 
 
@@ -472,7 +472,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Finding**](Finding.md)
+[**FindingToNotes**](FindingToNotes.md)
 
 ### Authorization
 
@@ -594,7 +594,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **findings_remove_note**
-> Note findings_remove_note(id, data)
+> findings_remove_note(id, data)
 
 
 
@@ -617,11 +617,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = defectdojo_api_swagger.FindingsApi(defectdojo_api_swagger.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this finding.
-data = defectdojo_api_swagger.Note() # Note | 
+data = defectdojo_api_swagger.FindingNote() # FindingNote | 
 
 try:
-    api_response = api_instance.findings_remove_note(id, data)
-    pprint(api_response)
+    api_instance.findings_remove_note(id, data)
 except ApiException as e:
     print("Exception when calling FindingsApi->findings_remove_note: %s\n" % e)
 ```
@@ -631,11 +630,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this finding. | 
- **data** | [**Note**](Note.md)|  | 
+ **data** | [**FindingNote**](FindingNote.md)|  | 
 
 ### Return type
 
-[**Note**](Note.md)
+void (empty response body)
 
 ### Authorization
 
@@ -649,7 +648,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **findings_remove_tags_partial_update**
-> Finding findings_remove_tags_partial_update(id, data)
+> findings_remove_tags_partial_update(id, data)
 
 
 
@@ -672,11 +671,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = defectdojo_api_swagger.FindingsApi(defectdojo_api_swagger.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this finding.
-data = defectdojo_api_swagger.Finding() # Finding | 
+data = defectdojo_api_swagger.Tag() # Tag | 
 
 try:
-    api_response = api_instance.findings_remove_tags_partial_update(id, data)
-    pprint(api_response)
+    api_instance.findings_remove_tags_partial_update(id, data)
 except ApiException as e:
     print("Exception when calling FindingsApi->findings_remove_tags_partial_update: %s\n" % e)
 ```
@@ -686,11 +684,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this finding. | 
- **data** | [**Finding**](Finding.md)|  | 
+ **data** | [**Tag**](Tag.md)|  | 
 
 ### Return type
 
-[**Finding**](Finding.md)
+void (empty response body)
 
 ### Authorization
 
@@ -704,7 +702,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **findings_remove_tags_update**
-> Finding findings_remove_tags_update(id, data)
+> findings_remove_tags_update(id, data)
 
 
 
@@ -727,11 +725,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = defectdojo_api_swagger.FindingsApi(defectdojo_api_swagger.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this finding.
-data = defectdojo_api_swagger.Finding() # Finding | 
+data = defectdojo_api_swagger.Tag() # Tag | 
 
 try:
-    api_response = api_instance.findings_remove_tags_update(id, data)
-    pprint(api_response)
+    api_instance.findings_remove_tags_update(id, data)
 except ApiException as e:
     print("Exception when calling FindingsApi->findings_remove_tags_update: %s\n" % e)
 ```
@@ -741,11 +738,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this finding. | 
- **data** | [**Finding**](Finding.md)|  | 
+ **data** | [**Tag**](Tag.md)|  | 
 
 ### Return type
 
-[**Finding**](Finding.md)
+void (empty response body)
 
 ### Authorization
 
@@ -759,7 +756,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **findings_tags_create**
-> FindingCreate findings_tags_create(id, data)
+> Tag findings_tags_create(id, data)
 
 
 
@@ -782,7 +779,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = defectdojo_api_swagger.FindingsApi(defectdojo_api_swagger.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this finding.
-data = defectdojo_api_swagger.FindingCreate() # FindingCreate | 
+data = defectdojo_api_swagger.Tag() # Tag | 
 
 try:
     api_response = api_instance.findings_tags_create(id, data)
@@ -796,11 +793,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this finding. | 
- **data** | [**FindingCreate**](FindingCreate.md)|  | 
+ **data** | [**Tag**](Tag.md)|  | 
 
 ### Return type
 
-[**FindingCreate**](FindingCreate.md)
+[**Tag**](Tag.md)
 
 ### Authorization
 
@@ -814,7 +811,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **findings_tags_read**
-> Finding findings_tags_read(id)
+> Tag findings_tags_read(id)
 
 
 
@@ -853,7 +850,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Finding**](Finding.md)
+[**Tag**](Tag.md)
 
 ### Authorization
 

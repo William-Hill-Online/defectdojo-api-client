@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
 **author** | [**User**](User.md) |  | 
-**editor** | [**User**](User.md) |  | 
+**editor** | [**User**](User.md) |  | [optional] 
 **history** | [**list[NoteHistory]**](NoteHistory.md) |  | [optional] 
 **entry** | **str** |  | 
 **_date** | **datetime** |  | [optional] 

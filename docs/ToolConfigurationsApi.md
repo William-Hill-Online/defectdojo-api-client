@@ -118,7 +118,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tool_configurations_list**
-> InlineResponse20018 tool_configurations_list(id=id, name=name, tool_type=tool_type, url=url, authentication_type=authentication_type, limit=limit, offset=offset)
+> InlineResponse20019 tool_configurations_list(id=id, name=name, tool_type=tool_type, url=url, authentication_type=authentication_type, limit=limit, offset=offset)
 
 
 
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20018**](InlineResponse20018.md)
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 
