@@ -2,7 +2,7 @@
 
 ```
 docker run --rm -v ${PWD}:/local swaggerapi/swagger-codegen-cli generate \
-    -i /local/swagger.yaml \
+    -i /local/swagger.json \
     -l python \
     -o /local/ \
     -DpackageName=defectdojo_api_swagger
