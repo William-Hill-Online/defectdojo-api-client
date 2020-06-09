@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **product_manager** | **int** |  | [optional] 
 **technical_contact** | **int** |  | [optional] 
 **team_manager** | **int** |  | [optional] 
-**prod_type** | **int** |  | [optional] 
+**prod_type** | **int** |  | 
 **authorized_users** | **list[int]** |  | [optional] 
 **regulations** | **list[int]** |  | [optional] 
 

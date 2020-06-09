@@ -178,6 +178,9 @@ Class | Method | HTTP request | Description
 *StubFindingsApi* | [**stub_findings_partial_update**](docs/StubFindingsApi.md#stub_findings_partial_update) | **PATCH** /stub_findings/{id}/ | 
 *StubFindingsApi* | [**stub_findings_read**](docs/StubFindingsApi.md#stub_findings_read) | **GET** /stub_findings/{id}/ | 
 *StubFindingsApi* | [**stub_findings_update**](docs/StubFindingsApi.md#stub_findings_update) | **PUT** /stub_findings/{id}/ | 
+*SystemSettingsApi* | [**system_settings_list**](docs/SystemSettingsApi.md#system_settings_list) | **GET** /system_settings/ | 
+*SystemSettingsApi* | [**system_settings_partial_update**](docs/SystemSettingsApi.md#system_settings_partial_update) | **PATCH** /system_settings/{id}/ | 
+*SystemSettingsApi* | [**system_settings_update**](docs/SystemSettingsApi.md#system_settings_update) | **PUT** /system_settings/{id}/ | 
 *TestTypesApi* | [**test_types_create**](docs/TestTypesApi.md#test_types_create) | **POST** /test_types/ | 
 *TestTypesApi* | [**test_types_list**](docs/TestTypesApi.md#test_types_list) | **GET** /test_types/ | 
 *TestTypesApi* | [**test_types_partial_update**](docs/TestTypesApi.md#test_types_partial_update) | **PATCH** /test_types/{id}/ | 
@@ -216,13 +219,18 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [AcceptedRisk](docs/AcceptedRisk.md)
+ - [AddNewNoteOption](docs/AddNewNoteOption.md)
  - [DevelopmentEnvironment](docs/DevelopmentEnvironment.md)
  - [Endpoint](docs/Endpoint.md)
  - [Engagement](docs/Engagement.md)
+ - [ExecutiveSummary](docs/ExecutiveSummary.md)
  - [Finding](docs/Finding.md)
  - [FindingCreate](docs/FindingCreate.md)
  - [FindingImage](docs/FindingImage.md)
+ - [FindingNote](docs/FindingNote.md)
  - [FindingTemplate](docs/FindingTemplate.md)
+ - [FindingToFindingImages](docs/FindingToFindingImages.md)
+ - [FindingToNotes](docs/FindingToNotes.md)
  - [ImportScan](docs/ImportScan.md)
  - [InlineResponse200](docs/InlineResponse200.md)
  - [InlineResponse2001](docs/InlineResponse2001.md)
@@ -239,6 +247,7 @@ Class | Method | HTTP request | Description
  - [InlineResponse2002](docs/InlineResponse2002.md)
  - [InlineResponse20020](docs/InlineResponse20020.md)
  - [InlineResponse20021](docs/InlineResponse20021.md)
+ - [InlineResponse20022](docs/InlineResponse20022.md)
  - [InlineResponse2003](docs/InlineResponse2003.md)
  - [InlineResponse2004](docs/InlineResponse2004.md)
  - [InlineResponse2005](docs/InlineResponse2005.md)
@@ -257,12 +266,16 @@ Class | Method | HTTP request | Description
  - [ProductMeta](docs/ProductMeta.md)
  - [ProductType](docs/ProductType.md)
  - [ReImportScan](docs/ReImportScan.md)
+ - [ReportGenerate](docs/ReportGenerate.md)
+ - [ReportGenerateOption](docs/ReportGenerateOption.md)
  - [RiskAcceptance](docs/RiskAcceptance.md)
  - [Scan](docs/Scan.md)
  - [ScanSettings](docs/ScanSettings.md)
  - [ScanSettingsCreate](docs/ScanSettingsCreate.md)
  - [StubFinding](docs/StubFinding.md)
  - [StubFindingCreate](docs/StubFindingCreate.md)
+ - [SystemSettings](docs/SystemSettings.md)
+ - [Tag](docs/Tag.md)
  - [Test](docs/Test.md)
  - [TestCreate](docs/TestCreate.md)
  - [TestType](docs/TestType.md)

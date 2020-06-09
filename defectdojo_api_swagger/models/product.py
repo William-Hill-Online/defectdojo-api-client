@@ -148,8 +148,7 @@ class Product(object):
             self.technical_contact = technical_contact
         if team_manager is not None:
             self.team_manager = team_manager
-        if prod_type is not None:
-            self.prod_type = prod_type
+        self.prod_type = prod_type
         if authorized_users is not None:
             self.authorized_users = authorized_users
         if regulations is not None:
@@ -645,6 +644,8 @@ class Product(object):
         :param prod_type: The prod_type of this Product.  # noqa: E501
         :type: int
         """
+        if prod_type is None:
+            raise ValueError("Invalid value for `prod_type`, must not be `None`")  # noqa: E501
 
         self._prod_type = prod_type
 

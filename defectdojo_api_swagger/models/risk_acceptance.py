@@ -32,61 +32,64 @@ class RiskAcceptance(object):
     """
     swagger_types = {
         'id': 'int',
+        'name': 'str',
         'path': 'str',
-        'expiration_date': 'datetime',
         'accepted_by': 'str',
+        'expiration_date': 'datetime',
         'compensating_control': 'str',
         'created': 'datetime',
         'updated': 'datetime',
-        'reporter': 'int',
+        'owner': 'int',
         'accepted_findings': 'list[int]',
         'notes': 'list[int]'
     }
 
     attribute_map = {
         'id': 'id',
+        'name': 'name',
         'path': 'path',
-        'expiration_date': 'expiration_date',
         'accepted_by': 'accepted_by',
+        'expiration_date': 'expiration_date',
         'compensating_control': 'compensating_control',
         'created': 'created',
         'updated': 'updated',
-        'reporter': 'reporter',
+        'owner': 'owner',
         'accepted_findings': 'accepted_findings',
         'notes': 'notes'
     }
 
-    def __init__(self, id=None, path=None, expiration_date=None, accepted_by=None, compensating_control=None, created=None, updated=None, reporter=None, accepted_findings=None, notes=None):  # noqa: E501
+    def __init__(self, id=None, name=None, path=None, accepted_by=None, expiration_date=None, compensating_control=None, created=None, updated=None, owner=None, accepted_findings=None, notes=None):  # noqa: E501
         """RiskAcceptance - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
+        self._name = None
         self._path = None
-        self._expiration_date = None
         self._accepted_by = None
+        self._expiration_date = None
         self._compensating_control = None
         self._created = None
         self._updated = None
-        self._reporter = None
+        self._owner = None
         self._accepted_findings = None
         self._notes = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
+        self.name = name
         if path is not None:
             self.path = path
-        if expiration_date is not None:
-            self.expiration_date = expiration_date
         if accepted_by is not None:
             self.accepted_by = accepted_by
+        if expiration_date is not None:
+            self.expiration_date = expiration_date
         if compensating_control is not None:
             self.compensating_control = compensating_control
         if created is not None:
             self.created = created
         if updated is not None:
             self.updated = updated
-        if reporter is not None:
-            self.reporter = reporter
+        self.owner = owner
         self.accepted_findings = accepted_findings
         if notes is not None:
             self.notes = notes
@@ -113,6 +116,35 @@ class RiskAcceptance(object):
         self._id = id
 
     @property
+    def name(self):
+        """Gets the name of this RiskAcceptance.  # noqa: E501
+
+        Descriptive name which in the future may also be used to group risk acceptances together across engagements and products  # noqa: E501
+
+        :return: The name of this RiskAcceptance.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this RiskAcceptance.
+
+        Descriptive name which in the future may also be used to group risk acceptances together across engagements and products  # noqa: E501
+
+        :param name: The name of this RiskAcceptance.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+        if name is not None and len(name) > 100:
+            raise ValueError("Invalid value for `name`, length must be less than or equal to `100`")  # noqa: E501
+        if name is not None and len(name) < 1:
+            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")  # noqa: E501
+
+        self._name = name
+
+    @property
     def path(self):
         """Gets the path of this RiskAcceptance.  # noqa: E501
 
@@ -132,27 +164,6 @@ class RiskAcceptance(object):
         """
 
         self._path = path
-
-    @property
-    def expiration_date(self):
-        """Gets the expiration_date of this RiskAcceptance.  # noqa: E501
-
-
-        :return: The expiration_date of this RiskAcceptance.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._expiration_date
-
-    @expiration_date.setter
-    def expiration_date(self, expiration_date):
-        """Sets the expiration_date of this RiskAcceptance.
-
-
-        :param expiration_date: The expiration_date of this RiskAcceptance.  # noqa: E501
-        :type: datetime
-        """
-
-        self._expiration_date = expiration_date
 
     @property
     def accepted_by(self):
@@ -178,6 +189,27 @@ class RiskAcceptance(object):
             raise ValueError("Invalid value for `accepted_by`, length must be less than or equal to `200`")  # noqa: E501
 
         self._accepted_by = accepted_by
+
+    @property
+    def expiration_date(self):
+        """Gets the expiration_date of this RiskAcceptance.  # noqa: E501
+
+
+        :return: The expiration_date of this RiskAcceptance.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._expiration_date
+
+    @expiration_date.setter
+    def expiration_date(self, expiration_date):
+        """Sets the expiration_date of this RiskAcceptance.
+
+
+        :param expiration_date: The expiration_date of this RiskAcceptance.  # noqa: E501
+        :type: datetime
+        """
+
+        self._expiration_date = expiration_date
 
     @property
     def compensating_control(self):
@@ -245,25 +277,29 @@ class RiskAcceptance(object):
         self._updated = updated
 
     @property
-    def reporter(self):
-        """Gets the reporter of this RiskAcceptance.  # noqa: E501
+    def owner(self):
+        """Gets the owner of this RiskAcceptance.  # noqa: E501
 
+        Only the owner and staff users can edit the risk acceptance.  # noqa: E501
 
-        :return: The reporter of this RiskAcceptance.  # noqa: E501
+        :return: The owner of this RiskAcceptance.  # noqa: E501
         :rtype: int
         """
-        return self._reporter
+        return self._owner
 
-    @reporter.setter
-    def reporter(self, reporter):
-        """Sets the reporter of this RiskAcceptance.
+    @owner.setter
+    def owner(self, owner):
+        """Sets the owner of this RiskAcceptance.
 
+        Only the owner and staff users can edit the risk acceptance.  # noqa: E501
 
-        :param reporter: The reporter of this RiskAcceptance.  # noqa: E501
+        :param owner: The owner of this RiskAcceptance.  # noqa: E501
         :type: int
         """
+        if owner is None:
+            raise ValueError("Invalid value for `owner`, must not be `None`")  # noqa: E501
 
-        self._reporter = reporter
+        self._owner = owner
 
     @property
     def accepted_findings(self):

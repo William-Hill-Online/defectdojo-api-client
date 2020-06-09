@@ -44,8 +44,8 @@ class TestsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this test. (required)
-        :param AcceptedRisk data: (required)
-        :return: AcceptedRisk
+        :param list[AcceptedRisk] data: (required)
+        :return: RiskAcceptance
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -67,8 +67,8 @@ class TestsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this test. (required)
-        :param AcceptedRisk data: (required)
-        :return: AcceptedRisk
+        :param list[AcceptedRisk] data: (required)
+        :return: RiskAcceptance
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -132,7 +132,7 @@ class TestsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='AcceptedRisk',  # noqa: E501
+            response_type='RiskAcceptance',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -349,8 +349,8 @@ class TestsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this test. (required)
-        :param TestCreate data: (required)
-        :return: TestCreate
+        :param ReportGenerateOption data: (required)
+        :return: ReportGenerate
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -372,8 +372,8 @@ class TestsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this test. (required)
-        :param TestCreate data: (required)
-        :return: TestCreate
+        :param ReportGenerateOption data: (required)
+        :return: ReportGenerate
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -437,7 +437,7 @@ class TestsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='TestCreate',  # noqa: E501
+            response_type='ReportGenerate',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -466,7 +466,7 @@ class TestsApi(object):
         :param str engagement: 
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
-        :return: InlineResponse20017
+        :return: InlineResponse20018
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -498,7 +498,7 @@ class TestsApi(object):
         :param str engagement: 
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
-        :return: InlineResponse20017
+        :return: InlineResponse20018
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -572,7 +572,7 @@ class TestsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse20017',  # noqa: E501
+            response_type='InlineResponse20018',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

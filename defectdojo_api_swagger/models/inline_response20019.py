@@ -34,7 +34,7 @@ class InlineResponse20019(object):
         'count': 'int',
         'next': 'str',
         'previous': 'str',
-        'results': 'list[ToolProductSettings]'
+        'results': 'list[ToolConfiguration]'
     }
 
     attribute_map = {
@@ -131,7 +131,7 @@ class InlineResponse20019(object):
 
 
         :return: The results of this InlineResponse20019.  # noqa: E501
-        :rtype: list[ToolProductSettings]
+        :rtype: list[ToolConfiguration]
         """
         return self._results
 
@@ -141,7 +141,7 @@ class InlineResponse20019(object):
 
 
         :param results: The results of this InlineResponse20019.  # noqa: E501
-        :type: list[ToolProductSettings]
+        :type: list[ToolConfiguration]
         """
         if results is None:
             raise ValueError("Invalid value for `results`, must not be `None`")  # noqa: E501

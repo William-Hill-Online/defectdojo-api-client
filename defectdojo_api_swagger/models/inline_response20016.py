@@ -34,7 +34,7 @@ class InlineResponse20016(object):
         'count': 'int',
         'next': 'str',
         'previous': 'str',
-        'results': 'list[TestType]'
+        'results': 'list[SystemSettings]'
     }
 
     attribute_map = {
@@ -131,7 +131,7 @@ class InlineResponse20016(object):
 
 
         :return: The results of this InlineResponse20016.  # noqa: E501
-        :rtype: list[TestType]
+        :rtype: list[SystemSettings]
         """
         return self._results
 
@@ -141,7 +141,7 @@ class InlineResponse20016(object):
 
 
         :param results: The results of this InlineResponse20016.  # noqa: E501
-        :type: list[TestType]
+        :type: list[SystemSettings]
         """
         if results is None:
             raise ValueError("Invalid value for `results`, must not be `None`")  # noqa: E501

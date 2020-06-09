@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **product_types_generate_report**
-> ProductType product_types_generate_report(id, data)
+> ReportGenerate product_types_generate_report(id, data)
 
 
 
@@ -89,7 +89,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = defectdojo_api_swagger.ProductTypesApi(defectdojo_api_swagger.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this product_ type.
-data = defectdojo_api_swagger.ProductType() # ProductType | 
+data = defectdojo_api_swagger.ReportGenerateOption() # ReportGenerateOption | 
 
 try:
     api_response = api_instance.product_types_generate_report(id, data)
@@ -103,11 +103,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this product_ type. | 
- **data** | [**ProductType**](ProductType.md)|  | 
+ **data** | [**ReportGenerateOption**](ReportGenerateOption.md)|  | 
 
 ### Return type
 
-[**ProductType**](ProductType.md)
+[**ReportGenerate**](ReportGenerate.md)
 
 ### Authorization
 

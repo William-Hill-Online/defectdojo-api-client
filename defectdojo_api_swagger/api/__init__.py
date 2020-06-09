@@ -22,6 +22,7 @@ from defectdojo_api_swagger.api.reimport_scan_api import ReimportScanApi
 from defectdojo_api_swagger.api.scan_settings_api import ScanSettingsApi
 from defectdojo_api_swagger.api.scans_api import ScansApi
 from defectdojo_api_swagger.api.stub_findings_api import StubFindingsApi
+from defectdojo_api_swagger.api.system_settings_api import SystemSettingsApi
 from defectdojo_api_swagger.api.test_types_api import TestTypesApi
 from defectdojo_api_swagger.api.tests_api import TestsApi
 from defectdojo_api_swagger.api.tool_configurations_api import ToolConfigurationsApi

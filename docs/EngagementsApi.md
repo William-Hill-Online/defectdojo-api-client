@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **engagements_accept_risks**
-> AcceptedRisk engagements_accept_risks(id, data)
+> RiskAcceptance engagements_accept_risks(id, data)
 
 
 
@@ -40,7 +40,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = defectdojo_api_swagger.EngagementsApi(defectdojo_api_swagger.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this engagement.
-data = defectdojo_api_swagger.AcceptedRisk() # AcceptedRisk | 
+data = [defectdojo_api_swagger.AcceptedRisk()] # list[AcceptedRisk] | 
 
 try:
     api_response = api_instance.engagements_accept_risks(id, data)
@@ -54,11 +54,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this engagement. | 
- **data** | [**AcceptedRisk**](AcceptedRisk.md)|  | 
+ **data** | [**list[AcceptedRisk]**](AcceptedRisk.md)|  | 
 
 ### Return type
 
-[**AcceptedRisk**](AcceptedRisk.md)
+[**RiskAcceptance**](RiskAcceptance.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **engagements_close**
-> Engagement engagements_close(id, data)
+> engagements_close(id)
 
 
 
@@ -95,11 +95,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = defectdojo_api_swagger.EngagementsApi(defectdojo_api_swagger.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this engagement.
-data = defectdojo_api_swagger.Engagement() # Engagement | 
 
 try:
-    api_response = api_instance.engagements_close(id, data)
-    pprint(api_response)
+    api_instance.engagements_close(id)
 except ApiException as e:
     print("Exception when calling EngagementsApi->engagements_close: %s\n" % e)
 ```
@@ -109,11 +107,10 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this engagement. | 
- **data** | [**Engagement**](Engagement.md)|  | 
 
 ### Return type
 
-[**Engagement**](Engagement.md)
+void (empty response body)
 
 ### Authorization
 
@@ -232,7 +229,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **engagements_generate_report**
-> Engagement engagements_generate_report(id, data)
+> ReportGenerate engagements_generate_report(id, data)
 
 
 
@@ -255,7 +252,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = defectdojo_api_swagger.EngagementsApi(defectdojo_api_swagger.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this engagement.
-data = defectdojo_api_swagger.Engagement() # Engagement | 
+data = defectdojo_api_swagger.ReportGenerateOption() # ReportGenerateOption | 
 
 try:
     api_response = api_instance.engagements_generate_report(id, data)
@@ -269,11 +266,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this engagement. | 
- **data** | [**Engagement**](Engagement.md)|  | 
+ **data** | [**ReportGenerateOption**](ReportGenerateOption.md)|  | 
 
 ### Return type
 
-[**Engagement**](Engagement.md)
+[**ReportGenerate**](ReportGenerate.md)
 
 ### Authorization
 
@@ -480,7 +477,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **engagements_reopen**
-> Engagement engagements_reopen(id, data)
+> engagements_reopen(id)
 
 
 
@@ -503,11 +500,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = defectdojo_api_swagger.EngagementsApi(defectdojo_api_swagger.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this engagement.
-data = defectdojo_api_swagger.Engagement() # Engagement | 
 
 try:
-    api_response = api_instance.engagements_reopen(id, data)
-    pprint(api_response)
+    api_instance.engagements_reopen(id)
 except ApiException as e:
     print("Exception when calling EngagementsApi->engagements_reopen: %s\n" % e)
 ```
@@ -517,11 +512,10 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this engagement. | 
- **data** | [**Engagement**](Engagement.md)|  | 
 
 ### Return type
 
-[**Engagement**](Engagement.md)
+void (empty response body)
 
 ### Authorization
 

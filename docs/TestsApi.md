@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **tests_accept_risks**
-> AcceptedRisk tests_accept_risks(id, data)
+> RiskAcceptance tests_accept_risks(id, data)
 
 
 
@@ -38,7 +38,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = defectdojo_api_swagger.TestsApi(defectdojo_api_swagger.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this test.
-data = defectdojo_api_swagger.AcceptedRisk() # AcceptedRisk | 
+data = [defectdojo_api_swagger.AcceptedRisk()] # list[AcceptedRisk] | 
 
 try:
     api_response = api_instance.tests_accept_risks(id, data)
@@ -52,11 +52,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this test. | 
- **data** | [**AcceptedRisk**](AcceptedRisk.md)|  | 
+ **data** | [**list[AcceptedRisk]**](AcceptedRisk.md)|  | 
 
 ### Return type
 
-[**AcceptedRisk**](AcceptedRisk.md)
+[**RiskAcceptance**](RiskAcceptance.md)
 
 ### Authorization
 
@@ -175,7 +175,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tests_generate_report**
-> TestCreate tests_generate_report(id, data)
+> ReportGenerate tests_generate_report(id, data)
 
 
 
@@ -198,7 +198,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = defectdojo_api_swagger.TestsApi(defectdojo_api_swagger.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this test.
-data = defectdojo_api_swagger.TestCreate() # TestCreate | 
+data = defectdojo_api_swagger.ReportGenerateOption() # ReportGenerateOption | 
 
 try:
     api_response = api_instance.tests_generate_report(id, data)
@@ -212,11 +212,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this test. | 
- **data** | [**TestCreate**](TestCreate.md)|  | 
+ **data** | [**ReportGenerateOption**](ReportGenerateOption.md)|  | 
 
 ### Return type
 
-[**TestCreate**](TestCreate.md)
+[**ReportGenerate**](ReportGenerate.md)
 
 ### Authorization
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tests_list**
-> InlineResponse20017 tests_list(id=id, title=title, test_type=test_type, target_start=target_start, target_end=target_end, notes=notes, percent_complete=percent_complete, actual_time=actual_time, engagement=engagement, limit=limit, offset=offset)
+> InlineResponse20018 tests_list(id=id, title=title, test_type=test_type, target_start=target_start, target_end=target_end, notes=notes, percent_complete=percent_complete, actual_time=actual_time, engagement=engagement, limit=limit, offset=offset)
 
 
 
@@ -289,7 +289,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20017**](InlineResponse20017.md)
+[**InlineResponse20018**](InlineResponse20018.md)
 
 ### Authorization
 

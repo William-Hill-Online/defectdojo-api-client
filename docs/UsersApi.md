@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **users_list**
-> InlineResponse20021 users_list(id=id, username=username, first_name=first_name, last_name=last_name, limit=limit, offset=offset)
+> InlineResponse20022 users_list(id=id, username=username, first_name=first_name, last_name=last_name, limit=limit, offset=offset)
 
 
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20021**](InlineResponse20021.md)
+[**InlineResponse20022**](InlineResponse20022.md)
 
 ### Authorization
 

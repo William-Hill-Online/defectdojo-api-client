@@ -43,8 +43,8 @@ class FindingsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param FindingCreate data: (required)
-        :return: FindingCreate
+        :param list[AcceptedRisk] data: (required)
+        :return: RiskAcceptance
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -65,8 +65,8 @@ class FindingsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param FindingCreate data: (required)
-        :return: FindingCreate
+        :param list[AcceptedRisk] data: (required)
+        :return: RiskAcceptance
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -124,7 +124,7 @@ class FindingsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='FindingCreate',  # noqa: E501
+            response_type='RiskAcceptance',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -340,8 +340,8 @@ class FindingsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param FindingCreate data: (required)
-        :return: FindingCreate
+        :param ReportGenerateOption data: (required)
+        :return: ReportGenerate
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -362,8 +362,8 @@ class FindingsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param FindingCreate data: (required)
-        :return: FindingCreate
+        :param ReportGenerateOption data: (required)
+        :return: ReportGenerate
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -421,7 +421,7 @@ class FindingsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='FindingCreate',  # noqa: E501
+            response_type='ReportGenerate',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -456,6 +456,7 @@ class FindingsApi(object):
         :param str duplicate: 
         :param str test__engagement__product: 
         :param str test__engagement: 
+        :param str unique_id_from_tool: 
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
         :return: InlineResponse2004
@@ -496,6 +497,7 @@ class FindingsApi(object):
         :param str duplicate: 
         :param str test__engagement__product: 
         :param str test__engagement: 
+        :param str unique_id_from_tool: 
         :param int limit: Number of results to return per page.
         :param int offset: The initial index from which to return the results.
         :return: InlineResponse2004
@@ -503,7 +505,7 @@ class FindingsApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'title', '_date', 'severity', 'description', 'mitigated', 'endpoints', 'test', 'active', 'verified', 'false_p', 'reporter', 'url', 'out_of_scope', 'duplicate', 'test__engagement__product', 'test__engagement', 'limit', 'offset']  # noqa: E501
+        all_params = ['id', 'title', '_date', 'severity', 'description', 'mitigated', 'endpoints', 'test', 'active', 'verified', 'false_p', 'reporter', 'url', 'out_of_scope', 'duplicate', 'test__engagement__product', 'test__engagement', 'unique_id_from_tool', 'limit', 'offset']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -558,6 +560,8 @@ class FindingsApi(object):
             query_params.append(('test__engagement__product', params['test__engagement__product']))  # noqa: E501
         if 'test__engagement' in params:
             query_params.append(('test__engagement', params['test__engagement']))  # noqa: E501
+        if 'unique_id_from_tool' in params:
+            query_params.append(('unique_id_from_tool', params['unique_id_from_tool']))  # noqa: E501
         if 'limit' in params:
             query_params.append(('limit', params['limit']))  # noqa: E501
         if 'offset' in params:
@@ -607,8 +611,8 @@ class FindingsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this finding. (required)
-        :param FindingCreate data: (required)
-        :return: FindingCreate
+        :param AddNewNoteOption data: (required)
+        :return: Note
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -630,8 +634,8 @@ class FindingsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this finding. (required)
-        :param FindingCreate data: (required)
-        :return: FindingCreate
+        :param AddNewNoteOption data: (required)
+        :return: Note
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -695,7 +699,7 @@ class FindingsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='FindingCreate',  # noqa: E501
+            response_type='Note',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -714,8 +718,8 @@ class FindingsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this finding. (required)
-        :param Finding data: (required)
-        :return: Finding
+        :param AddNewNoteOption data: (required)
+        :return: Note
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -737,8 +741,8 @@ class FindingsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this finding. (required)
-        :param Finding data: (required)
-        :return: Finding
+        :param AddNewNoteOption data: (required)
+        :return: Note
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -802,7 +806,7 @@ class FindingsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Finding',  # noqa: E501
+            response_type='Note',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -821,7 +825,7 @@ class FindingsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this finding. (required)
-        :return: Finding
+        :return: FindingToNotes
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -843,7 +847,7 @@ class FindingsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this finding. (required)
-        :return: Finding
+        :return: FindingToNotes
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -901,7 +905,7 @@ class FindingsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Finding',  # noqa: E501
+            response_type='FindingToNotes',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1126,8 +1130,8 @@ class FindingsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this finding. (required)
-        :param Note data: (required)
-        :return: Note
+        :param FindingNote data: (required)
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1149,8 +1153,8 @@ class FindingsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this finding. (required)
-        :param Note data: (required)
-        :return: Note
+        :param FindingNote data: (required)
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1214,7 +1218,7 @@ class FindingsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Note',  # noqa: E501
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1233,8 +1237,8 @@ class FindingsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this finding. (required)
-        :param Finding data: (required)
-        :return: Finding
+        :param Tag data: (required)
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1256,8 +1260,8 @@ class FindingsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this finding. (required)
-        :param Finding data: (required)
-        :return: Finding
+        :param Tag data: (required)
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1321,7 +1325,7 @@ class FindingsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Finding',  # noqa: E501
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1340,8 +1344,8 @@ class FindingsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this finding. (required)
-        :param Finding data: (required)
-        :return: Finding
+        :param Tag data: (required)
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1363,8 +1367,8 @@ class FindingsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this finding. (required)
-        :param Finding data: (required)
-        :return: Finding
+        :param Tag data: (required)
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1428,7 +1432,7 @@ class FindingsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Finding',  # noqa: E501
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1447,8 +1451,8 @@ class FindingsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this finding. (required)
-        :param FindingCreate data: (required)
-        :return: FindingCreate
+        :param Tag data: (required)
+        :return: Tag
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1470,8 +1474,8 @@ class FindingsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this finding. (required)
-        :param FindingCreate data: (required)
-        :return: FindingCreate
+        :param Tag data: (required)
+        :return: Tag
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1535,7 +1539,7 @@ class FindingsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='FindingCreate',  # noqa: E501
+            response_type='Tag',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1554,7 +1558,7 @@ class FindingsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this finding. (required)
-        :return: Finding
+        :return: Tag
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1576,7 +1580,7 @@ class FindingsApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this finding. (required)
-        :return: Finding
+        :return: Tag
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1634,7 +1638,7 @@ class FindingsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Finding',  # noqa: E501
+            response_type='Tag',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
