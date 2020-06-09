@@ -118,8 +118,8 @@ class User(object):
             raise ValueError("Invalid value for `username`, length must be less than or equal to `150`")  # noqa: E501
         if username is not None and len(username) < 1:
             raise ValueError("Invalid value for `username`, length must be greater than or equal to `1`")  # noqa: E501
-        if username is not None and not re.search(r'^[\\w.@+-]+$', username):  # noqa: E501
-            raise ValueError(r"Invalid value for `username`, must be a follow pattern or equal to `/^[\\w.@+-]+$/`")  # noqa: E501
+        if username is not None and not re.search(r'^[\w.@+-]+$', username):  # noqa: E501
+            raise ValueError(r"Invalid value for `username`, must be a follow pattern or equal to `/^[\w.@+-]+$/`")  # noqa: E501
 
         self._username = username
 
