@@ -1090,6 +1090,13 @@
                         "type": "string"
                     },
                     {
+                        "name": "is_Mitigated",
+                        "in": "query",
+                        "description": "",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
                         "name": "endpoints",
                         "in": "query",
                         "description": "",
@@ -1525,7 +1532,11 @@
                         }
                     }
                 ],
-                "responses": {},
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
                 "tags": [
                     "findings"
                 ]
@@ -1543,7 +1554,11 @@
                         }
                     }
                 ],
-                "responses": {},
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
                 "tags": [
                     "findings"
                 ]
@@ -1621,7 +1636,7 @@
                         "required": false,
                         "type": "string",
                         "format": "date",
-                        "default": "2020-06-09"
+                        "default": "2020-07-02"
                     },
                     {
                         "name": "minimum_severity",
@@ -1687,6 +1702,7 @@
                             "SKF Scan",
                             "Clair Klar Scan",
                             "Bandit Scan",
+                            "ESLint Scan",
                             "SSL Labs Scan",
                             "Acunetix Scan",
                             "Fortify Scan",
@@ -1739,8 +1755,11 @@
                             "Gitleaks Scan",
                             "Choctaw Hog Scan",
                             "Harbor Vulnerability Scan",
+                            "Yarn Audit Scan",
                             "BugCrowd Scan",
-                            "GitLab SAST Report"
+                            "GitLab SAST Report",
+                            "HuskyCI Report",
+                            "CCVS Report"
                         ]
                     },
                     {
@@ -3594,6 +3613,7 @@
                             "SKF Scan",
                             "Clair Klar Scan",
                             "Bandit Scan",
+                            "ESLint Scan",
                             "SSL Labs Scan",
                             "Acunetix Scan",
                             "Fortify Scan",
@@ -3646,8 +3666,11 @@
                             "Gitleaks Scan",
                             "Choctaw Hog Scan",
                             "Harbor Vulnerability Scan",
+                            "Yarn Audit Scan",
                             "BugCrowd Scan",
-                            "GitLab SAST Report"
+                            "GitLab SAST Report",
+                            "HuskyCI Report",
+                            "CCVS Report"
                         ]
                     },
                     {
@@ -7630,7 +7653,7 @@
                     "title": "Scan date",
                     "type": "string",
                     "format": "date",
-                    "default": "2020-06-09"
+                    "default": "2020-07-02"
                 },
                 "minimum_severity": {
                     "title": "Minimum severity",
@@ -7688,6 +7711,7 @@
                         "SKF Scan",
                         "Clair Klar Scan",
                         "Bandit Scan",
+                        "ESLint Scan",
                         "SSL Labs Scan",
                         "Acunetix Scan",
                         "Fortify Scan",
@@ -7740,8 +7764,11 @@
                         "Gitleaks Scan",
                         "Choctaw Hog Scan",
                         "Harbor Vulnerability Scan",
+                        "Yarn Audit Scan",
                         "BugCrowd Scan",
-                        "GitLab SAST Report"
+                        "GitLab SAST Report",
+                        "HuskyCI Report",
+                        "CCVS Report"
                     ]
                 },
                 "endpoint_to_add": {
@@ -8150,6 +8177,7 @@
                         "SKF Scan",
                         "Clair Klar Scan",
                         "Bandit Scan",
+                        "ESLint Scan",
                         "SSL Labs Scan",
                         "Acunetix Scan",
                         "Fortify Scan",
@@ -8202,8 +8230,11 @@
                         "Gitleaks Scan",
                         "Choctaw Hog Scan",
                         "Harbor Vulnerability Scan",
+                        "Yarn Audit Scan",
                         "BugCrowd Scan",
-                        "GitLab SAST Report"
+                        "GitLab SAST Report",
+                        "HuskyCI Report",
+                        "CCVS Report"
                     ]
                 },
                 "endpoint_to_add": {
