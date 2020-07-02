@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **report_info** | **str** |  | 
 **test** | [**Test**](Test.md) |  | [optional] 
 **endpoint** | [**Endpoint**](Endpoint.md) |  | [optional] 
-**endpoints** | [**list[Endpoint]**](Endpoint.md) |  | [optional] 
-**findings** | [**list[Finding]**](Finding.md) |  | [optional] 
+**endpoints** | [**list[Endpoint]**](Endpoint.md) |  | [optional] [readonly] 
+**findings** | [**list[Finding]**](Finding.md) |  | [optional] [readonly] 
 **user** | [**User**](User.md) |  | [optional] 
 **team_name** | **str** |  | 
 **title** | **str** |  | 

@@ -3,15 +3,15 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
+**id** | **int** |  | [optional] [readonly] 
 **author** | [**User**](User.md) |  | 
 **editor** | [**User**](User.md) |  | [optional] 
-**history** | [**list[NoteHistory]**](NoteHistory.md) |  | [optional] 
+**history** | [**list[NoteHistory]**](NoteHistory.md) |  | [optional] [readonly] 
 **entry** | **str** |  | 
-**_date** | **datetime** |  | [optional] 
+**date** | **datetime** |  | [optional] [readonly] 
 **private** | **bool** |  | [optional] 
 **edited** | **bool** |  | [optional] 
-**edit_time** | **datetime** |  | [optional] 
+**edit_time** | **datetime** |  | [optional] [readonly] 
 **note_type** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

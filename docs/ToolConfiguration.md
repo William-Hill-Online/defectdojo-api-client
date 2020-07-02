@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
+**id** | **int** |  | [optional] [readonly] 
 **configuration_url** | **str** |  | 
 **name** | **str** |  | 
 **description** | **str** |  | [optional] 

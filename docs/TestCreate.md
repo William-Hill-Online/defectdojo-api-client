@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
+**id** | **int** |  | [optional] [readonly] 
 **engagement** | **int** |  | 
 **notes** | **list[int]** |  | [optional] 
 **tags** | **list[str]** |  | [optional] 
@@ -11,11 +11,11 @@ Name | Type | Description | Notes
 **description** | **str** |  | [optional] 
 **target_start** | **datetime** |  | 
 **target_end** | **datetime** |  | 
-**estimated_time** | **str** |  | [optional] 
-**actual_time** | **str** |  | [optional] 
+**estimated_time** | **str** |  | [optional] [readonly] 
+**actual_time** | **str** |  | [optional] [readonly] 
 **percent_complete** | **int** |  | [optional] 
-**updated** | **datetime** |  | [optional] 
-**created** | **datetime** |  | [optional] 
+**updated** | **datetime** |  | [optional] [readonly] 
+**created** | **datetime** |  | [optional] [readonly] 
 **version** | **str** |  | [optional] 
 **lead** | **int** |  | [optional] 
 **test_type** | **int** |  | 

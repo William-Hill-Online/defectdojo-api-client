@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
+**id** | **int** |  | [optional] [readonly] 
 **title** | **str** |  | 
-**_date** | **date** |  | [optional] 
+**date** | **date** |  | [optional] 
 **severity** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
-**test** | **int** |  | [optional] 
-**reporter** | **int** |  | [optional] 
+**test** | **int** |  | [optional] [readonly] 
+**reporter** | **int** |  | [optional] [readonly] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

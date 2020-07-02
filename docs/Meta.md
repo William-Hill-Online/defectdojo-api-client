@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
+**id** | **int** |  | [optional] [readonly] 
 **product** | **int** |  | [optional] 
 **endpoint** | **int** |  | [optional] 
 **name** | **str** |  | 

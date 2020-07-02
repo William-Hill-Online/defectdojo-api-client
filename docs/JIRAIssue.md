@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
+**id** | **int** |  | [optional] [readonly] 
 **jira_id** | **str** |  | 
 **jira_key** | **str** |  | 
 **finding** | **int** |  | [optional] 

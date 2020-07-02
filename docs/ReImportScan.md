@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **verified** | **bool** |  | [optional] [default to True]
 **scan_type** | **str** |  | 
 **endpoint_to_add** | **int** |  | [optional] 
-**file** | **str** |  | [optional] 
+**file** | **str** |  | [optional] [readonly] 
 **test** | **int** |  | 
 **push_to_jira** | **bool** |  | [optional] [default to False]
 

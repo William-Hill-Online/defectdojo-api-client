@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
+**id** | **int** |  | [optional] [readonly] 
 **user** | **int** |  | 
 **product** | **int** |  | 
 **data** | **datetime** |  | [optional] 
 **addresses** | **str** |  | [optional] 
-**_date** | **datetime** |  | [optional] 
+**date** | **datetime** |  | [optional] [readonly] 
 **frequency** | **str** |  | [optional] 
 **email** | **str** |  | 
 **protocol** | **str** |  | [optional] 

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
+**id** | **int** |  | [optional] [readonly] 
 **project_key** | **str** |  | [optional] 
 **component** | **str** |  | [optional] 
 **push_all_issues** | **bool** | Automatically maintain parity with JIRA. Always create and update JIRA tickets for findings in this Product. | [optional] 

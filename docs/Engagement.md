@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
+**id** | **int** |  | [optional] [readonly] 
 **tags** | **list[str]** |  | [optional] 
 **name** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
@@ -12,9 +12,9 @@ Name | Type | Description | Notes
 **target_start** | **date** |  | 
 **target_end** | **date** |  | 
 **reason** | **str** |  | [optional] 
-**updated** | **datetime** |  | [optional] 
-**created** | **datetime** |  | [optional] 
-**active** | **bool** |  | [optional] 
+**updated** | **datetime** |  | [optional] [readonly] 
+**created** | **datetime** |  | [optional] [readonly] 
+**active** | **bool** |  | [optional] [readonly] 
 **tracker** | **str** | Link to epic or ticket system with changes to version. | [optional] 
 **test_strategy** | **str** |  | [optional] 
 **threat_model** | **bool** |  | [optional] 
@@ -22,10 +22,10 @@ Name | Type | Description | Notes
 **pen_test** | **bool** |  | [optional] 
 **check_list** | **bool** |  | [optional] 
 **status** | **str** |  | [optional] 
-**progress** | **str** |  | [optional] 
-**tmodel_path** | **str** |  | [optional] 
-**risk_path** | **str** |  | [optional] 
-**done_testing** | **bool** |  | [optional] 
+**progress** | **str** |  | [optional] [readonly] 
+**tmodel_path** | **str** |  | [optional] [readonly] 
+**risk_path** | **str** |  | [optional] [readonly] 
+**done_testing** | **bool** |  | [optional] [readonly] 
 **engagement_type** | **str** |  | [optional] 
 **build_id** | **str** | Build ID of the product the engagement tested. | [optional] 
 **commit_hash** | **str** | Commit hash from repo | [optional] 
@@ -41,7 +41,7 @@ Name | Type | Description | Notes
 **build_server** | **int** | Build server responsible for CI/CD test | [optional] 
 **source_code_management_server** | **int** | Source code server for CI/CD test | [optional] 
 **orchestration_engine** | **int** | Orchestration service responsible for CI/CD test | [optional] 
-**risk_acceptance** | **list[int]** |  | [optional] 
+**risk_acceptance** | **list[int]** |  | [optional] [readonly] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

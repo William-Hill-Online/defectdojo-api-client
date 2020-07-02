@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
+**id** | **int** |  | [optional] [readonly] 
 **configuration_name** | **str** | Enter a name to give to this configuration | [optional] 
 **url** | **str** | For configuring Jira, view: https://defectdojo.readthedocs.io/en/latest/features.html#jira-integration | 
 **username** | **str** |  | 

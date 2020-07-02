@@ -3,14 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
-**findings_count** | **str** |  | [optional] 
-**findings_list** | **str** |  | [optional] 
+**id** | **int** |  | [optional] [readonly] 
+**findings_count** | **str** |  | [optional] [readonly] 
+**findings_list** | **str** |  | [optional] [readonly] 
 **tags** | **list[str]** |  | [optional] 
-**product_meta** | [**list[ProductMeta]**](ProductMeta.md) |  | [optional] 
+**product_meta** | [**list[ProductMeta]**](ProductMeta.md) |  | [optional] [readonly] 
 **name** | **str** |  | 
 **description** | **str** |  | 
-**created** | **datetime** |  | [optional] 
+**created** | **datetime** |  | [optional] [readonly] 
 **prod_numeric_grade** | **int** |  | [optional] 
 **business_criticality** | **str** |  | [optional] 
 **platform** | **str** |  | [optional] 

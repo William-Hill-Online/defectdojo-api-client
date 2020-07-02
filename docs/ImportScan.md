@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **scan_type** | **str** |  | 
 **endpoint_to_add** | **int** |  | [optional] 
 **test_type** | **str** |  | [optional] 
-**file** | **str** |  | [optional] 
+**file** | **str** |  | [optional] [readonly] 
 **engagement** | **int** |  | 
 **lead** | **int** |  | [optional] 
 **tags** | **list[str]** |  | [optional] 

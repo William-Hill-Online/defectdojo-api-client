@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
+**id** | **int** |  | [optional] [readonly] 
 **tags** | **list[str]** |  | [optional] 
 **name** | **str** |  | 
 **static_tool** | **bool** |  | [optional] 
