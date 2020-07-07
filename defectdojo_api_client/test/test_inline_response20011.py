@@ -40,7 +40,7 @@ class TestInlineResponse20011(unittest.TestCase):
                 next = '0', 
                 previous = '0', 
                 results = [
-                    defectdojo_api_client.models.product_type.Product type(
+                    defectdojo_api_client.models.product_type.ProductType(
                         id = 56, 
                         name = '0', 
                         critical_product = True, 
@@ -53,7 +53,7 @@ class TestInlineResponse20011(unittest.TestCase):
             return InlineResponse20011(
                 count = 56,
                 results = [
-                    defectdojo_api_client.models.product_type.Product type(
+                    defectdojo_api_client.models.product_type.ProductType(
                         id = 56, 
                         name = '0', 
                         critical_product = True, 

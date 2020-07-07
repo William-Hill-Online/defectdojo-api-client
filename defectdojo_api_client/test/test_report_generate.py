@@ -36,7 +36,7 @@ class TestReportGenerate(unittest.TestCase):
         # model = defectdojo_api_client.models.report_generate.ReportGenerate()  # noqa: E501
         if include_optional :
             return ReportGenerate(
-                executive_summary = defectdojo_api_client.models.executive_summary.Executive summary(
+                executive_summary = defectdojo_api_client.models.executive_summary.ExecutiveSummary(
                     engagement_name = '0', 
                     engagement_target_start = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
                     engagement_target_end = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
@@ -46,7 +46,7 @@ class TestReportGenerate(unittest.TestCase):
                     test_environment_name = '0', 
                     test_strategy_ref = '0', 
                     total_findings = 56, ), 
-                product_type = defectdojo_api_client.models.product_type.Product type(
+                product_type = defectdojo_api_client.models.product_type.ProductType(
                     id = 56, 
                     name = '0', 
                     critical_product = True, 
@@ -394,7 +394,7 @@ class TestReportGenerate(unittest.TestCase):
             )
         else :
             return ReportGenerate(
-                executive_summary = defectdojo_api_client.models.executive_summary.Executive summary(
+                executive_summary = defectdojo_api_client.models.executive_summary.ExecutiveSummary(
                     engagement_name = '0', 
                     engagement_target_start = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
                     engagement_target_end = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
