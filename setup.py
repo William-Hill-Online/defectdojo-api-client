@@ -12,8 +12,8 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "defectdojo-openapi"
-VERSION = "1.0.0"
+NAME = "defectdojo-api-client"
+VERSION = "dev"
 # To install the library, run the following
 #
 # python setup.py install

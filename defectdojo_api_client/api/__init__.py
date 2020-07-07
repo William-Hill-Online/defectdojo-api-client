@@ -1,0 +1,31 @@
+from __future__ import absolute_import
+
+# flake8: noqa
+
+# import apis into api package
+from defectdojo_api_client.api.api_token_auth_api import ApiTokenAuthApi
+from defectdojo_api_client.api.development_environments_api import DevelopmentEnvironmentsApi
+from defectdojo_api_client.api.endpoints_api import EndpointsApi
+from defectdojo_api_client.api.engagements_api import EngagementsApi
+from defectdojo_api_client.api.finding_templates_api import FindingTemplatesApi
+from defectdojo_api_client.api.findings_api import FindingsApi
+from defectdojo_api_client.api.import_scan_api import ImportScanApi
+from defectdojo_api_client.api.jira_configurations_api import JiraConfigurationsApi
+from defectdojo_api_client.api.jira_finding_mappings_api import JiraFindingMappingsApi
+from defectdojo_api_client.api.jira_product_configurations_api import JiraProductConfigurationsApi
+from defectdojo_api_client.api.metadata_api import MetadataApi
+from defectdojo_api_client.api.note_type_api import NoteTypeApi
+from defectdojo_api_client.api.notes_api import NotesApi
+from defectdojo_api_client.api.product_types_api import ProductTypesApi
+from defectdojo_api_client.api.products_api import ProductsApi
+from defectdojo_api_client.api.reimport_scan_api import ReimportScanApi
+from defectdojo_api_client.api.scan_settings_api import ScanSettingsApi
+from defectdojo_api_client.api.scans_api import ScansApi
+from defectdojo_api_client.api.stub_findings_api import StubFindingsApi
+from defectdojo_api_client.api.system_settings_api import SystemSettingsApi
+from defectdojo_api_client.api.test_types_api import TestTypesApi
+from defectdojo_api_client.api.tests_api import TestsApi
+from defectdojo_api_client.api.tool_configurations_api import ToolConfigurationsApi
+from defectdojo_api_client.api.tool_product_settings_api import ToolProductSettingsApi
+from defectdojo_api_client.api.tool_types_api import ToolTypesApi
+from defectdojo_api_client.api.users_api import UsersApi
