@@ -20,4 +20,5 @@ docker run --rm -v ${PWD}:/local openapitools/openapi-generator-cli generate \
     --additional-properties packageName=defectdojo_api_client \
     --additional-properties packageVersion=$VERSION \
     --additional-properties projectName=defectdojo-api-client
+    --additional-properties generateSourceCodeOnly=true
 ```
